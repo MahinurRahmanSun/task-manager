@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Task Manager</h1>
+    <p class="subtitle">Plan your day and tick things off.</p>
+
+    <form id="task-form" class="task-form">
+      <input id="task-input" type="text" placeholder="Add a new task" aria-label="New task" maxlength="120" autocomplete="off">
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="toolbar">
+      <div class="filters" role="group" aria-label="Filter tasks">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="active">Active</button>
+        <button class="filter" data-filter="done">Done</button>
+      </div>
+      <span id="count" class="count"></span>
+    </div>
+
+    <ul id="task-list" class="task-list"></ul>
+    <p id="empty" class="empty" hidden>No tasks here yet.</p>
+
+    <button id="clear-done" class="clear">Clear completed</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
